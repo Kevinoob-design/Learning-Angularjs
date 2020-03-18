@@ -1,0 +1,37 @@
+<h1>Agregar empleado</h1>
+<div name="formularioEmpleado" class="row">
+    <form autocomplete="off" ng-submit="submit()" novalidate name="formularioEmpleado" class="form col col-lg-4">
+        <input required name="nombre" ng-model="empleado.nombre" class="{{error}} w-100 p-2" placeholder="Nombre"
+            type="text">
+        <span ng-show="formularioEmpleado.nombre.$touched && formularioEmpleado.nombre.$invalid">
+            El nombre es requerido
+        </span>
+
+        <input required name="apellido" ng-model="empleado.apellido" class="{{error}} w-100 p-2" placeholder="Apellido"
+            type="text">
+        <span ng-show="formularioEmpleado.apellido.$touched && formularioEmpleado.apellido.$invalid">
+            El apellido es requerido
+        </span>
+
+        <input required name="numero" ng-model="empleado.numero" class="{{error}} w-100 p-2" placeholder="Numero Tel"
+            type="text">
+        <span ng-show="formularioEmpleado.numero.$touched && formularioEmpleado.numero.$invalid">
+            El numero es requerido
+        </span>
+
+        <input required name="usuario" ng-model="empleado.usuario" class="{{error}} w-100 p-2" placeholder="Usuario"
+            type="text">
+        <span ng-show="formularioEmpleado.usuario.$touched && formularioEmpleado.usuario.$invalid">
+            El usuario es requerido
+        </span>
+
+        <input required name="clave" ng-model="empleado.clave" class="{{error}} w-100 p-2" placeholder="Clave"
+            type="password">
+        <span ng-show="formularioEmpleado.clave.$touched && formularioEmpleado.clave.$invalid">
+            La clave es requerido
+        </span>
+        <button ng-disabled="formularioEmpleado.$invalid" type="submit" class="submitFormBtn btn btn-primary w-100">
+            {{action}}
+        </button>
+    </form>
+</div>

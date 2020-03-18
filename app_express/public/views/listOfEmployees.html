@@ -1,0 +1,27 @@
+<h1>Lista de empleados</h1>
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Numero Tel</th>
+            <th>Usuario</th>
+            <th>Clave</th>
+            <th>Operaciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="empleado in empleados">
+            <td>{{empleado.nombre}}</td>
+            <td>{{empleado.apellido}}</td>
+            <td>{{empleado.numero}}</td>
+            <td>{{empleado.usuario}}</td>
+            <td>{{empleado.clave}}</td>
+            <td>
+                <input ng-click='removeEmpleado($index)' class="mr-2 btn btn-danger" type="button" value="ELIMINAR">
+                <input ng-click='activarEdicion($index)' class="mr-2 btn btn-primary" type="button" value="EDITAR">
+            </td>
+        </tr>
+    </tbody>
+</table>
